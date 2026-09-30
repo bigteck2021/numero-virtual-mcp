@@ -35,7 +35,7 @@ claude mcp add numero-virtual -e NUMERO_VIRTUAL_API_KEY=nv_live_SUA_CHAVE -- npx
 **Rodando do código-fonte** (sem npm):
 
 ```bash
-git clone https://github.com/kelribrito2025/numero-virtual-mcp.git && cd numero-virtual-mcp
+git clone https://github.com/bigteck2021/numero-virtual-mcp.git && cd numero-virtual-mcp
 npm install && npm run build
 # no cliente MCP: "command": "node", "args": ["/caminho/absoluto/dist/index.js"]
 ```
