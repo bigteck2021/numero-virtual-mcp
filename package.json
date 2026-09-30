@@ -1,0 +1,48 @@
+{
+  "name": "numero-virtual-mcp",
+  "version": "0.1.0",
+  "description": "Servidor MCP do Número Virtual: números virtuais para verificação por SMS, direto do Claude, Cursor ou qualquer cliente MCP.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "numero-virtual-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && node -e \"require('fs').chmodSync('dist/index.js', 0o755)\"",
+    "start": "node dist/index.js",
+    "test": "node --test dist/cliente.test.js",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sms",
+    "numero-virtual",
+    "verificacao",
+    "otp"
+  ],
+  "homepage": "https://app.numero-virtual.com",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kelribrito2025/numero-virtual-mcp"
+  },
+  "bugs": {
+    "url": "https://github.com/kelribrito2025/numero-virtual-mcp/issues"
+  }
+}
